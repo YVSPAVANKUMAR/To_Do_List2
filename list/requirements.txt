@@ -1,4 +1,5 @@
-flask
-flask-pymongo
-flask-cors
-python-dotenv
+Flask==2.3.3
+flask-cors==4.0.0
+flask-pymongo==2.3.0
+python-dotenv==1.0.0
+
