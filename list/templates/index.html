@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pastel To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script>
+  <link rel="stylesheet" href="../static/styles.css">
+
+</head>
+<body>
+  <!-- Email Screen -->
+  <div id="emailScreen" class="container">
+    <div class="card">
+      <div class="icon-header">
+        <i class="fa-solid fa-list-check icon-main"></i>
+      </div>
+      <h1 class="title">Organize Your Day</h1>
+      <p class="subtitle">Stay productive and manage tasks effortlessly.</p>
+
+      <div class="input-wrapper">
+        <i class="fa-solid fa-envelope icon"></i>
+        <input type="email" id="emailInput" placeholder="Enter your Gmail address" class="input" />
+      </div><br>
+      <small id="emailError" class="error hidden">Please enter a valid Gmail address</small>
+
+      <button id="enterBtn" class="btn btn-primary">
+        <i class="fa-solid fa-arrow-right"></i> Continue
+      </button>
+
+      <p class="small-note">💡 Tip: Use the same Gmail to access your tasks anytime.</p>
+    </div>
+  </div>
+
+  <!-- Task Screen -->
+  <div id="taskScreen" class="container hidden">
+    <div class="card">
+      <h1 class="title">Your Tasks</h1>
+      <p id="userEmail" class="subtitle"></p>
+
+      <div class="input-group">
+        <input type="text" id="task" placeholder="Enter new task" class="input" />
+        <input type="datetime-local" id="datetime" class="input" />
+        <select id="priority" class="input">
+          <option value="low">Low Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="high">High Priority</option>
+        </select>
+        <button id="addBtn" class="btn btn-primary">
+          <i class="fa-solid fa-plus"></i> Add Task
+        </button>
+      </div>
+
+      <div id="loader" class="loader hidden"></div>
+      <ul id="taskList">
+  <li class="skeleton"></li>
+  <li class="skeleton"></li>
+  <li class="skeleton"></li>
+</ul>
+<ul id="taskList" class="task-list">
+</ul>
+
+
+      <button id="logoutBtn" class="btn btn-secondary">
+        <i class="fa-solid fa-right-from-bracket"></i> Logout
+      </button>
+    </div>
+  </div>
+
+  <script src="../static/script.js"></script>
+</body>
+</html>
